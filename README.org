@@ -11,7 +11,7 @@ assuming zookeeper/kafka are running create a topic called `test-topic`
 ** Running
 
 #+begin_src shell
-  $ pipenv run gunicorn -c gunicorn.py kafka_web.app -b 0.0.0.0:7500
+  $ gunicorn -c gunicorn.py kafka_web.app -b 0.0.0.0:7500
 #+end_src
 
 watch stdout, no messages are produced for topic, setting producer sync=True will see failures for delivery report.
