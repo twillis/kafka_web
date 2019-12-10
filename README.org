@@ -1,0 +1,13 @@
+* Kafka 'bug' demonstration
+** Installing
+
+#+begin_src shell
+  $ pip install -e ./kafka_web
+  $ pip install gunicorn
+#+end_src
+
+** Running
+
+#+begin_src shell
+  $ pipenv run gunicorn -c gunicorn.py kafka_web.app -b 0.0.0.0:7500
+#+end_src
